@@ -1,5 +1,60 @@
 <div class="product">
-  <h2>Pack of 5 stickers for $5</h2>
+  <h2>Pack of 5 Notes on Web Development $5</h2>
+  <h3>Free shipping anywhere in the world!</h3>
+  <div class="sticker">
+    <%= image_tag("https://achievement-images.teamtreehouse.com/Generic_TVM_alt.png", alt: "REACT ALL THE THINGS") %>
+  </div>
+
+  <%= form_tag charges_path, class: "payment-form" do %>
+    <article>
+      <% if flash[:error].present? %>
+        <div id="error_explanation">
+          <p><%= flash[:error] %></p>
+        </div>
+      <% end %>
+    </article>
+
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button buy-button"
+            data-key="<%= Rails.configuration.stripe[:pk_live_qY1VLDwnLKBK8qUd9NfSBdCS] %>"
+            data-description="Web Analysis"
+            data-amount="500"
+            data-label="Buy Now"
+            data-billing-address="true"
+            data-shipping-address="true"
+            data-locale="auto">
+            </script>
+  <% end %>
+</div>
+<div class="product">
+  <h2>Pack Of 5 Beginner Notes On Ruby On Rails $10</h2>
+  <h3>Free shipping anywhere in the world!</h3>
+  <div class="sticker">
+    <%= image_tag("https://cdn-images-1.medium.com/max/300/1*-oIlwIWlt0BDN4b5a9rRCQ.png", alt: "Ruby On Rails") %>
+  </div>
+
+  <%= form_tag charges_path, class: "payment-form" do %>
+    <article>
+      <% if flash[:error].present? %>
+        <div id="error_explanation">
+          <p><%= flash[:error] %></p>
+        </div>
+      <% end %>
+    </article>
+
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button buy-button"
+            data-key="<%= Rails.configuration.stripe[:pk_live_qY1VLDwnLKBK8qUd9NfSBdCS] %>"
+            data-description="Web Analysis"
+            data-amount="1000"
+            data-label="Buy Now"
+            data-billing-address="true"
+            data-shipping-address="true"
+            data-locale="auto">
+            </script>
+  <% end %>
+</div>
+
+<div class="product">
+  <h2></h2>
   <h3>Free shipping anywhere in the world!</h3>
   <div class="sticker">
     <%= image_tag("https://s3-us-west-2.amazonaws.com/stickers.win/reactallthethings_350x263.png", alt: "REACT ALL THE THINGS") %>
@@ -15,15 +70,122 @@
     </article>
 
     <script src="https://checkout.stripe.com/checkout.js" class="stripe-button buy-button"
-            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-            data-description="Pack of 5 stickers"
-            data-amount="500"
+            data-key="<%= Rails.configuration.stripe[:pk_live_qY1VLDwnLKBK8qUd9NfSBdCS] %>"
+            data-description="Web Analysis"
+            data-amount="5000"
             data-label="Buy Now"
             data-billing-address="true"
             data-shipping-address="true"
-            data-locale="auto"></script>
+            data-locale="auto">
+            </script>
   <% end %>
 </div>
+
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <h1 class="display-4">Pricing</h1>
+      <p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.</p>
+    </div>
+
+    <div class="container">
+      <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Free</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>10 users included</li>
+              <li>2 GB of storage</li>
+              <li>Email support</li>
+              <li>Help center access</li>
+            </ul>
+            <%= form_tag charges_path, class: "payment-form" do %>
+              <article>
+                <% if flash[:error].present? %>
+                  <div id="error_explanation">
+                    <p><%= flash[:error] %></p>
+                  </div>
+                <% end %>
+              </article>
+
+              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button buy-button"
+                      data-key="<%= Rails.configuration.stripe[:pk_live_qY1VLDwnLKBK8qUd9NfSBdCS] %>"
+                      data-description="Web Analysis"
+                      data-amount="500"
+                      data-label="Buy Now"
+                      data-billing-address="true"
+                      data-shipping-address="true"
+                      data-locale="auto">
+                      </script>
+            <% end %>          </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Pro</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>20 users included</li>
+              <li>10 GB of storage</li>
+              <li>Priority email support</li>
+              <li>Help center access</li>
+            </ul>
+            <%= form_tag charges_path, class: "payment-form" do %>
+              <article>
+                <% if flash[:error].present? %>
+                  <div id="error_explanation">
+                    <p><%= flash[:error] %></p>
+                  </div>
+                <% end %>
+              </article>
+
+              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button buy-button"
+                      data-key="<%= Rails.configuration.stripe[:pk_live_qY1VLDwnLKBK8qUd9NfSBdCS] %>"
+                      data-description="Web Analysis"
+                      data-amount="500"
+                      data-label="Buy Now"
+                      data-billing-address="true"
+                      data-shipping-address="true"
+                      data-locale="auto">
+                      </script>
+            <% end %>          </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Enterprise</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>30 users included</li>
+              <li>15 GB of storage</li>
+              <li>Phone and email support</li>
+              <li>Help center access</li>
+            </ul>
+            <%= form_tag charges_path, class: "payment-form" do %>
+              <article>
+                <% if flash[:error].present? %>
+                  <div id="error_explanation">
+                    <p><%= flash[:error] %></p>
+                  </div>
+                <% end %>
+              </article>
+
+              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button buy-button"
+                      data-key="<%= Rails.configuration.stripe[:pk_live_qY1VLDwnLKBK8qUd9NfSBdCS] %>"
+                      data-description="Web Analysis"
+                      data-amount="500"
+                      data-label="Buy Now"
+                      data-billing-address="true"
+                      data-shipping-address="true"
+                      data-locale="auto">
+                      </script>
+            <% end %>
+          </div>
+        </div>
+      </div>
 
 <div class="faq">
   <h2>FAQ</h2>
@@ -38,4 +200,3 @@
   <h4>I want to make a store like this. Can you help me?</h4>
   <p>Lucky you! <a href="https://learnetto.com/tutorials/the-11-minute-guide-to-building-and-launching-an-online-store-with-rails-stripe-checkout-and-heroku" style="text-decoration: underline;">I made a video</a> to show you how to do it.</p>
 </div>
-
